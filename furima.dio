@@ -1,0 +1,61 @@
+<mxfile host="65bd71144e" modified="2020-10-20T03:07:30.549Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.50.1 Chrome/83.0.4103.122 Electron/9.2.1 Safari/537.36" etag="m6tMz7IoUS32JYTmCu4o" version="13.6.5">
+    <diagram id="jEGH-BQR9BrzP0pOmOPS" name="ページ1">
+        <mxGraphModel dx="922" dy="703" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="74" value="usersテーブル" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;align=center;fontSize=14;" parent="1" vertex="1">
+                    <mxGeometry x="80" y="80" width="240" height="210" as="geometry"/>
+                </mxCell>
+                <mxCell id="75" value="u_nickname&#10;&#10;u_email&#10;&#10;u_password&#10;&#10;u_name_kanji&#10;&#10;u_name_kana&#10;&#10;u_birthday" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;" parent="74" vertex="1">
+                    <mxGeometry y="26" width="240" height="184" as="geometry"/>
+                </mxCell>
+                <mxCell id="91" value="itemsテーブル" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;align=center;fontSize=14;" parent="1" vertex="1">
+                    <mxGeometry x="480" y="80" width="240" height="210" as="geometry"/>
+                </mxCell>
+                <mxCell id="92" value="i_image&#10;&#10;i_product_name&#10;&#10;i_product_introduction&#10;&#10;i_delivery&#10;&#10;i_price&#10;&#10;user_id" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;" parent="91" vertex="1">
+                    <mxGeometry y="26" width="240" height="184" as="geometry"/>
+                </mxCell>
+                <mxCell id="112" value="addrssesテーブル" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;align=center;fontSize=14;" parent="1" vertex="1">
+                    <mxGeometry x="480" y="390" width="240" height="190" as="geometry"/>
+                </mxCell>
+                <mxCell id="113" value="a_credit_infomation&#10;&#10;a_shipping_address" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;" parent="112" vertex="1">
+                    <mxGeometry y="26" width="240" height="164" as="geometry"/>
+                </mxCell>
+                <mxCell id="116" value="" style="edgeStyle=entityRelationEdgeStyle;fontSize=12;html=1;endArrow=ERmany;endFill=0;" parent="1" edge="1">
+                    <mxGeometry width="100" height="100" relative="1" as="geometry">
+                        <mxPoint x="320" y="200" as="sourcePoint"/>
+                        <mxPoint x="473" y="200" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="95" value="buysテーブル" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;align=center;fontSize=14;" parent="1" vertex="1">
+                    <mxGeometry x="80" y="410" width="240" height="190" as="geometry"/>
+                </mxCell>
+                <mxCell id="96" value="b_who_purchase&#10;&#10;b_when_purchase&#10;&#10;b_what_purchase&#10;&#10;user_id&#10;&#10;item_id" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;" parent="95" vertex="1">
+                    <mxGeometry y="26" width="240" height="164" as="geometry"/>
+                </mxCell>
+                <mxCell id="132" value="" style="endArrow=none;html=1;exitX=1.013;exitY=0.262;exitDx=0;exitDy=0;exitPerimeter=0;entryX=-0.017;entryY=0.39;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="96" target="113" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="390" y="390" as="sourcePoint"/>
+                        <mxPoint x="440" y="340" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="400" y="480"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="133" value="" style="endArrow=none;html=1;exitX=1;exitY=0;exitDx=0;exitDy=0;entryX=-0.004;entryY=1.011;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="95" target="92" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="390" y="390" as="sourcePoint"/>
+                        <mxPoint x="440" y="340" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="134" value="" style="edgeStyle=entityRelationEdgeStyle;fontSize=12;html=1;endArrow=ERmany;entryX=-0.021;entryY=0.305;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.395;exitY=1.009;exitDx=0;exitDy=0;exitPerimeter=0;" parent="1" source="75" target="96" edge="1">
+                    <mxGeometry width="100" height="100" relative="1" as="geometry">
+                        <mxPoint x="190" y="330" as="sourcePoint"/>
+                        <mxPoint x="460" y="310" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
