@@ -2,16 +2,16 @@
 
 ## users テーブル
 
-| Column            | Type       | Options    |
-| ----------------  |-------     | ---------- |
-| nickname          | string     | null: fals |
-| email             | string     | null: fals |
-| password          | string     | null: fals |
-| familyname_kanji  | string     | null: fals |
-| firstname_kanji   | string     | null: fals |
-| familyname_kana   | string     | null: fals |
-| firstname_kana    | string     | null: fals |
-| birthday          | date       | null: fals |
+| Column            | Type       | Options     |
+| ----------------  |-------     | ----------  |
+| nickname          | string     | null: false |
+| email             | string     | null: false |
+| password          | string     | null: false |
+| familyname_kanji  | string     | null: false |
+| firstname_kanji   | string     | null: false |
+| familyname_kana   | string     | null: false |
+| firstname_kana    | string     | null: false |
+| birthday          | date       | null: false |
 
 ### Association
 
@@ -22,17 +22,17 @@
 
 ## items テーブル
 
-| Column                 | Type        | Options                         |
-| ---------------------- | ------      | ------------------------------- |
-| product_name           | string      | null: fals                      |
-| product_introduction   | text        | null: fals                      |
-| product_category_id    | integer     | null: fals                      |
-| product_status_id      | integer     | null: fals                      |
-| delivery_burden_id     | integer     | null: fals                      |
-| prefecture_id          | integer     | null: fals                      |
-| delivery_day_id        | integer     | null: fals                      |
-| price                  | integer     | null: fals                      |
-| user                   | references  | null: false, foreign_key: true  |
+| Column                 | Type        | Options                          |
+| ---------------------- | ------      | -------------------------------  |
+| product_name           | string      | null: false                      |
+| product_introduction   | text        | null: false                      |
+| product_category_id    | integer     | null: false                      |
+| product_status_id      | integer     | null: false                      |
+| delivery_burden_id     | integer     | null: false                      |
+| prefecture_id          | integer     | null: false                      |
+| delivery_day_id        | integer     | null: false                      |
+| price                  | integer     | null: false                      |
+| user                   | references  | null: false, foreign_key: true   |
 
 ### Association
 
@@ -54,15 +54,15 @@
 
 ## addresses テーブル
 
-| Column          | Type        | Options                         |
-| --------------- | ------      | ------------------------------- |
-| postalcode_id   | string      | null: fals                      |
-| prefecture_id   | integer     | null: fals                      |
-| city            | string      | null: fals                      |
-| housenumber     | string      | null: fals                      |
-| building        | string      |                                 |
-| phonenumber     | string      | null: fals                      |
-| shipping_addrss | string      | null: fals                      |
+| Column          | Type        | Options                          |
+| --------------- | ------      | -------------------------------  |
+| postalcode_id   | string      | null: false                      |
+| prefecture_id   | integer     | null: false                      |
+| city            | string      | null: false                      |
+| housenumber     | string      | null: false                      |
+| building        | string      |                                  |
+| phonenumber     | string      | null: false                      |
+| buy             | references  | null: false, foreign_key: true   |
 
 
 ### Association
