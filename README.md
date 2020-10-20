@@ -29,7 +29,7 @@
 | product_category_id    | integer     | null: fals                      |
 | product_status_id      | integer     | null: fals                      |
 | delivery_burden_id     | integer     | null: fals                      |
-| delivery_area_id       | integer     | null: fals                      |
+| prefecture_id          | integer     | null: fals                      |
 | delivery_day_id        | integer     | null: fals                      |
 | price                  | integer     | null: fals                      |
 | user                   | references  | null: false, foreign_key: true  |
@@ -54,15 +54,15 @@
 
 ## addresses テーブル
 
-| Column                | Type        | Options                         |
-| --------------------  | ------      | ------------------------------- |
-| credit_postalcode_id  | string      | null: fals                      |
-| credit_prefectures_id | integer     | null: fals                      |
-| credit_city           | string      | null: fals                      |
-| credit_housenumber    | string      | null: fals                      |
-| credit_building       | string      |                                 |
-| credit_phonenumber    | string      | null: fals                      |
-| shipping_addrss       | string      | null: fals                      |
+| Column          | Type        | Options                         |
+| --------------- | ------      | ------------------------------- |
+| postalcode_id   | string      | null: fals                      |
+| prefecture_id   | integer     | null: fals                      |
+| city            | string      | null: fals                      |
+| housenumber     | string      | null: fals                      |
+| building        | string      |                                 |
+| phonenumber     | string      | null: fals                      |
+| shipping_addrss | string      | null: fals                      |
 
 
 ### Association
