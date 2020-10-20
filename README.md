@@ -2,14 +2,17 @@
 
 ## users テーブル
 
-| Column       | Type       | Options    |
-| ------------ | ------     | ---------- |
-| u_nickname   | string     | not:  null |
-| u_email      | string     | not:  null |
-| u_password   | string     | not:  null |
-| u_name_kanji | string     | not:  null |
-| u_name_kana  | string     | not:  null |
-| u_birthday   | string     | not:  null |
+| Column            | Type       | Options    |
+| ----------------  |-------     | ---------- |
+| nickname          | string     | not:  null |
+| email             | string     | not:  null |
+| password          | string     | not:  null |
+| familyname_kanji  | string     | not:  null |
+| firstname_kanji   | string     | not:  null |
+| familyname_kana   | string     | not:  null |
+| firstname_kana    | string     | not:  null |
+| name_kana         | string     | not:  null |
+| birthday          | date       | not:  null |
 
 ### Association
 
@@ -22,11 +25,14 @@
 
 | Column                 | Type        | Options                         |
 | ---------------------- | ------      | ------------------------------- |
-| i_image                | string      | not:  null                      |
-| i_product_name         | string      | not:  null                      |
-| i_product_introduction | text        | not:  null                      |
-| i_delivery             | string      | not:  null                      |
-| i_price                | string      | not:  null                      |
+| product_name           | string      | not:  null                      |
+| product_introduction   | text        | not:  null                      |
+| product_category       | integer     | not:  null                      |
+| product_status    　　　| integer     | not:  null                      |
+| delivery_burden        | integer     | not:  null                      |
+| delivery_area          | integer     | not:  null                      |
+| delivery_day           | integer     | not:  null                      |
+| price                  | string      | not:  null                      |
 | user                   | references  | null: false, foreign_key: true  |
 
 ### Association
@@ -38,9 +44,6 @@
 
 | Column          | Type        | Options                         |
 | --------------- | ------      | ------------------------------- |
-| b_who_purchase  | string      | not:  null                      |
-| b_when_purchase | string      | not:  null                      |
-| b_what_purchase | string      | not:  null                      |
 | user            | references  | null: false, foreign_key: true  |
 | item            | references  | null: false, foreign_key: true  |
 
@@ -54,8 +57,17 @@
 
 | Column               | Type        | Options                         |
 | -------------------- | ------      | ------------------------------- |
-| a_credit_infomation  | string      | not:  null                      |
-| a_shipping_addrss    | string      | not:  null                      |
+| credit_infomation    | string      | not:  null                      |
+| credit_data          | data        | not:  null                      |
+| credit_security      | string      | not:  null                      |
+| credit_postalcode    | string      | not:  null                      |
+| credit_prefectures   | integer     | not:  null                      |
+| credit_city          | string      | not:  null                      |
+| credit_housenumber   | string      | not:  null                      |
+| credit_building      | string      |                                 |
+| credit_phonenumber   | string      | not:  null                      |
+| shipping_addrss      | string      | not:  null                      |
+
 
 ### Association
 
