@@ -4,15 +4,14 @@
 
 | Column            | Type       | Options    |
 | ----------------  |-------     | ---------- |
-| nickname          | string     | not:  null |
-| email             | string     | not:  null |
-| password          | string     | not:  null |
-| familyname_kanji  | string     | not:  null |
-| firstname_kanji   | string     | not:  null |
-| familyname_kana   | string     | not:  null |
-| firstname_kana    | string     | not:  null |
-| name_kana         | string     | not:  null |
-| birthday          | date       | not:  null |
+| nickname          | string     | null: fals |
+| email             | string     | null: fals |
+| password          | string     | null: fals |
+| familyname_kanji  | string     | null: fals |
+| firstname_kanji   | string     | null: fals |
+| familyname_kana   | string     | null: fals |
+| firstname_kana    | string     | null: fals |
+| birthday          | date       | null: fals |
 
 ### Association
 
@@ -25,20 +24,20 @@
 
 | Column                 | Type        | Options                         |
 | ---------------------- | ------      | ------------------------------- |
-| product_name           | string      | not:  null                      |
-| product_introduction   | text        | not:  null                      |
-| product_category       | integer     | not:  null                      |
-| product_status    　　　| integer     | not:  null                      |
-| delivery_burden        | integer     | not:  null                      |
-| delivery_area          | integer     | not:  null                      |
-| delivery_day           | integer     | not:  null                      |
-| price                  | string      | not:  null                      |
+| product_name           | string      | null: fals                      |
+| product_introduction   | text        | null: fals                      |
+| product_category_id    | integer     | null: fals                      |
+| product_status_id      | integer     | null: fals                      |
+| delivery_burden_id     | integer     | null: fals                      |
+| delivery_area_id       | integer     | null: fals                      |
+| delivery_day_id        | integer     | null: fals                      |
+| price                  | integer     | null: fals                      |
 | user                   | references  | null: false, foreign_key: true  |
 
 ### Association
 
 - belongs_to :user
-- has_one :buys
+- has_one :buy
 
 ## buys テーブル
 
@@ -51,22 +50,19 @@
 
 - belongs_to :user
 - belongs_to :item
-- has_one : addrss
+- has_one : address
 
-## addrsses テーブル
+## addresses テーブル
 
-| Column               | Type        | Options                         |
-| -------------------- | ------      | ------------------------------- |
-| credit_infomation    | string      | not:  null                      |
-| credit_data          | data        | not:  null                      |
-| credit_security      | string      | not:  null                      |
-| credit_postalcode    | string      | not:  null                      |
-| credit_prefectures   | integer     | not:  null                      |
-| credit_city          | string      | not:  null                      |
-| credit_housenumber   | string      | not:  null                      |
-| credit_building      | string      |                                 |
-| credit_phonenumber   | string      | not:  null                      |
-| shipping_addrss      | string      | not:  null                      |
+| Column                | Type        | Options                         |
+| --------------------  | ------      | ------------------------------- |
+| credit_postalcode_id  | string      | null: fals                      |
+| credit_prefectures_id | integer     | null: fals                      |
+| credit_city           | string      | null: fals                      |
+| credit_housenumber    | string      | null: fals                      |
+| credit_building       | string      |                                 |
+| credit_phonenumber    | string      | null: fals                      |
+| shipping_addrss       | string      | null: fals                      |
 
 
 ### Association
