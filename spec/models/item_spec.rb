@@ -91,14 +91,14 @@ describe Item, type: :model do
         expect(@item.errors.full_messages).to include("Price can't be blank")
       end
 
-      it '価格が数字でない場合（文字列の場合）は、出品できない' do
-        @item.price = 'aaaa'
+      it '価格が全角数字の場合は、出品できない' do
+        @item.price = '１１１１１'
         @item.valid?
         expect(@item.errors.full_messages).to include('Price is not a number')
       end
 
       it '価格299円以下では出品できない' do
-        @item.price = '280'
+        @item.price = '299'
         @item.valid?
         expect(@item.errors.full_messages).to include("Price must be greater than or equal to 300")
       end
