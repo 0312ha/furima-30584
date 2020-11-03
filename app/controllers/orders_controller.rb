@@ -24,7 +24,7 @@ class OrdersController < ApplicationController
     params.permit(:postalcode_id, :prefecture_id, :city, :housenumber, :phonenumber, :building, :token, :item_id).merge(user_id: current_user.id)
   end
 
-  def set_oder
+  def set_item
     @item = Item.find(params[:id])
   end
 
