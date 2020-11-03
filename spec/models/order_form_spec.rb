@@ -7,9 +7,16 @@ describe OrderForm, type: :model do
     end
 
     context '配送先入力が全て入力されている時' do
+
       it '全ての項目を入力すると登録ができる' do
         expect(@order_form).to be_valid
       end
+
+      it 'buildingがなくても登録できる' do
+        @order_form.building= ''
+        expect(@order_form).to be_valid
+      end
+
     end
 
     context '配送先入力が上手くいかない時' do
@@ -66,6 +73,7 @@ describe OrderForm, type: :model do
         @order_form.valid?
         expect(@order_form.errors.full_messages).to include("Token can't be blank")
       end
+
     end
   end
 end
