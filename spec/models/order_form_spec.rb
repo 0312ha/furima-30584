@@ -39,7 +39,7 @@ describe OrderForm, type: :model do
       end
 
       it 'prefecture_idID1が選択されていた場合は出品できない' do
-        @order_form.prefecture_id = '1'
+        @order_form.prefecture_id = 1
         @order_form.valid?
         expect(@order_form.errors.full_messages).to include('Prefecture must be other than 1')
       end
