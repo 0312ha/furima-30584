@@ -7,6 +7,7 @@ class Item < ApplicationRecord
   belongs_to_active_hash :prefecture
   belongs_to_active_hash :delivery_day
   belongs_to :user
+  has_one :order
 
   with_options numericality: { other_than: 1 } do
     validates :product_category_id
